@@ -43,7 +43,7 @@ function sortTable(n) {
     const table = document.getElementById("articlesTable");
     let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     switching = true;
-    dir = "asc"; // Set the sorting direction to ascending
+    dir = "asc"; // Define a ordenação da tabela para ascendente
 
     while (switching) {
         switching = false;
@@ -55,12 +55,12 @@ function sortTable(n) {
             y = rows[i + 1].getElementsByTagName("TD")[n];
 
             if (dir === "asc") {
-                if (n === 2 || n === 3) { // Sort by number (citations or year)
+                if (n === 2 || n === 3) { // Ordena pelo número
                     if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
                         shouldSwitch = true;
                         break;
                     }
-                } else { // Sort by text (title, journal)
+                } else { // ordena pelo texto
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
                         break;
