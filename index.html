@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professora Nattane</title>
+    <link href="css/estilo.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre Mim</a></li>
+          <li><a href="#classes">Aulas</a></li>
+          <li><a href="#research">Pesquisas</a></li>
+          <li><a href="#articles">Artigos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h1>Sobre Mim</h1>
+        <hr />
+        <div class="about-container">
+          <figure>
+            <img
+              src="img/vlcsnap-2023-02-05-10h21m05s765.png"
+              alt="Foto de Nattane"
+              class="profile-pic"
+            />
+          </figure>
+          <p>
+            Professora do Instituto Federal Goiano Campus Urutaí. Doutora em
+            Ciências da Computação pelo Instituto de Informática da Universidade
+            Federal de Goiás. Pesquisa na área de mineração de dados e machine
+            learning, com foco em aplicação de técnicas de classificação e
+            seleção de variáveis. Possui Graduação em Redes de Computadores pela
+            Universidade Estadual de Goiás e Mestrado em Ciência da Computação
+            pela Universidade Federal de Goiás.
+          </p>
+        </div>
+      </section>
+
+      <section id="classes">
+        <h1>Aulas</h1>
+        <hr />
+        <div class="class-item">
+          <h2>Programação para Web 1</h2>
+          <ul class="class-info">
+            <li><strong>Carga Horária:</strong> 68 horas</li>
+            <li><strong>Curso:</strong> Sistemas de Informação</li>
+            <li><strong>Período:</strong> 4º Período</li>
+          </ul>
+          <button class="toggle-btn-ementa">Ver Ementa</button>
+          <p class="description">
+            Servidores WEB. Protocolo HTTP. HTML5. Cascading Style Sheets (CSS).
+            Layouts responsivos. JavaScript. Gerenciadores de conteúdo. Uso de
+            frameworks atuais.
+          </p>
+        </div>
+
+        <div class="class-item">
+          <h2>Metodologia Científica</h2>
+          <ul class="class-info">
+            <li><strong>Carga Horária:</strong> 34 horas</li>
+            <li><strong>Curso:</strong> Sistemas de Informação</li>
+            <li><strong>Período:</strong> 2º Período</li>
+          </ul>
+          <button class="toggle-btn-ementa">Ver Ementa</button>
+          <p class="description">
+            Conhecimento (tipos de conhecimento), ciência (senso comum e
+            ciência) e método científico. Principais teorias (Thomas Kuhn, Imre
+            Lakatos, Paul Feyrabend, Karl Popper) sobre o método científico e a
+            suas contribuições para a ciência contemporânea. Introdução ao
+            planejamento da pesquisa científica (finalidades, tipos, etapas).
+            Normas da ABNT. Tipos de trabalhos acadêmico-científico.
+          </p>
+        </div>
+
+        <div class="class-item">
+          <h2>Mineração de Dados</h2>
+          <ul class="class-info">
+            <li><strong>Carga Horária:</strong> 68 horas</li>
+            <li><strong>Turma:</strong> Sistemas de Informação</li>
+            <li><strong>Período:</strong> 6º Período</li>
+          </ul>
+          <button class="toggle-btn-ementa">Ver Ementa</button>
+          <p class="description">
+            Introdução aos conceitos de processo de descoberta de conhecimento.
+            Técnicas de preparação e redução de dados. Tarefas e técnicas de
+            mineração de dados: classificação, regressão, detecção de
+            agrupamentos, descoberta de regras de associação, sumarização.
+            Exemplos de mineração de dados em domínios específicos, tais como:
+            bioinformática, sistemas de informação geográfica, bases de dados de
+            imagens, bases de dados de documentos textuais, bases de dados
+            multimídia, sistemas Web, bases de dados espaço-temporais, sistemas
+            baseados em data streams. Ferramentas de mineração de dados.
+          </p>
+        </div>
+      </section>
+
+      <section id="research">
+        <h1>Pesquisas</h1>
+        <hr />
+        <div class="research-item">
+          <h2>
+            Mineração de Dados para a classificação de alimentos com base em sua
+            composição química
+          </h2>
+          <button class="toggle-btn-descricao">Ver descrição</button>
+          <p class="description">
+            Esta pesquisa explora como técnicas de mineração de dados podem ser
+            usadas para identificar padrões de desempenho e otimizar processos
+            educacionais.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h2>Mineração de dados aplicado a saúde</h2>
+          <button class="toggle-btn-descricao">Ver descrição</button>
+          <p class="description">
+            Estudo sobre o uso de redes neurais para classificação eficiente em
+            grandes volumes de dados, com ênfase em redes neurais profundas.
+          </p>
+        </div>
+      </section>
+
+      <section id="articles">
+        <h1>Artigos Publicados</h1>
+        <hr />
+        <table id="articlesTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable(0)">Título</th>
+              <th onclick="sortTable(1)">Revista</th>
+              <th onclick="sortTable(2)">Citações</th>
+              <th onclick="sortTable(3)">Ano</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Exemplo de linhas de artigos -->
+            <tr>
+              <td>
+                Classification of cabernet sauvignon from two different
+                countries in South America by chemical compounds and support
+                vector machines/td>
+              </td>
+              <td>Applied Artificial Intelligence</td>
+              <td>30</td>
+              <td>2016</td>
+              <td>
+                <a
+                  href="https://doi.org/10.1080/08839514.2016.1214416"
+                  target="_blank"
+                  >Link</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Geographical recognition of Syrah wines by combining feature
+                selection with Extreme Learning Machine
+              </td>
+              <td>Measurement</td>
+              <td>43</td>
+              <td>2018</td>
+              <td>
+                <a
+                  href="https://doi.org/10.1016/j.measurement.2018.01.052"
+                  target="_blank"
+                  >Link</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Advanced data mining approaches in the assessment of urinary
+                concentrations of bisphenols, chlorophenols, parabens and
+                benzophenones in Brazilian children and their association to DNA
+                damage
+              </td>
+              <td>Environment international</td>
+              <td>121</td>
+              <td>2018</td>
+              <td>
+                <a
+                  href="https://doi.org/10.1016/j.envint.2018.04.023"
+                  target="_blank"
+                  >Link</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Improvements on least squares twin multi-class classification
+                support vector machine
+              </td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Título do Artigo 2</td>
+              <td>Revista B</td>
+              <td>25</td>
+              <td>2021</td>
+              <td>
+                <a href="https://exemplo.com/artigo2" target="_blank">Link</a>
+              </td>
+            </tr>
+            <!-- Adicione mais artigos aqui -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Nattane. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Referência ao arquivo JavaScript -->
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

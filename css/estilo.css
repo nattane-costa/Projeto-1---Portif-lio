@@ -1,0 +1,181 @@
+/* Reset básico para remover margens e padding padrões,
+ além de definir box-sizing.
+ Essa é uma boa pratica para garantir a consistência de estilo entre
+ diferentes navegarodes
+ */
+* {
+    margin: 0; /* Define a margem em zero, garantindo que não haverá espaços inesperados*/
+    padding: 0; /* Define o padding (espaço interno dos elementos) em zero*/
+    box-sizing: border-box; /*Define o modelo de caixa para que width e height incluam o padding e
+     a borda, facilitando o controle do layout.*/
+}
+
+/* Estilo básico para o corpo do documento */
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; /* Define o espaçamento entre linhas dos elementos inline*/
+    background-color: #f4f4f4; /* Define a cor de fundo clara */
+    color: #333; /* Define a cor de texto para todo o documento */
+    padding-top: 70px; /*Adiciona um espaçamento no topo do corpo principal para compensar a barra fixa, assim não fica grudado*/
+}
+
+/* Estilo do cabeçalho 
+header {
+  Deixei vazio pois ainda não pensei em como colocar o "Professora Nattane" acima da barra
+  de navegação
+ }
+*/
+
+/* Estilo da barra de navegação principal (só tenho uma barra de navegação nessa página)*/
+nav {
+    background-color: #0056b3; /* Cor do fundo da barra */
+    padding: 1rem 1rem; /* Define o espaçamento em todas as direções (acima, abaixo, esquerda e direita). O rem é uma unidade relativa */
+    border-radius: 8px; /* Aplica bordas arredondadas ao elemento nav. O valor 8px define o raio da curva, fazendo com que os cantos do nav tenham uma leve curvatura. */
+    margin-bottom: 2.8rem; /* Define o espaço externo (margem) abaixo do elemento nav */
+    position: fixed; /* Faz com que o elemento nav tenha uma posição fixa na janela do navegador. Isso significa que, mesmo que o usuário role a página para cima ou para baixo, o nav permanecerá fixo no topo da tela. */
+    top: 2px; /*Define que o nav estará posicionado 2 pixels abaixo do topo da janela do navegador. Isso é aplicado por causa da propriedade position: fixed, que permite controlar a posição exata do elemento na tela.*/
+    left: 0; /*Posiciona o nav no lado esquerdo da janela do navegador*/
+    width: 100%; /* Faz a barra ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que a barra fique sobre os outros elementos */
+}
+
+
+/* Estilo para a lista de links de navegação */
+.nav-links {
+    list-style-type: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe os itens da lista horizontalmente */
+    justify-content: center; /* Centraliza os links de navegação horizontalmente no centro do contêiner flexível (só funciona pois os elementos estão flexíveis pelo display flex) */
+    gap: 1rem; /* Espaçamento entre os itens da barra de navegação | PARA RESPONSIVO TEM QUE FAZER DE OUTRA FORMA.*/
+    padding: 0; /* Remove o espaçamento padrão da lista */
+    margin: 0; /* Remove margem externa da lista */
+    align-items: center; /* Centraliza os itens verticalmente dentro do contêiner flexível. */
+}
+
+/* Estilo para cada link na barra de navegação */
+.nav-links li a {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-size: 1.1rem; /* Tamanho do texto dos links, define como pouca coisa maior do que o tamanho do texto da fonte do documento */
+    padding: 0.5rem 1rem; /* Aplica um espaçamento interno de 0.5rem nas partes superior e inferior, e 1rem nas laterais dos links (aumenta a área clicável e melhora a legibilidade dos links)*/
+    border-radius: 5px; /* Bordas arredondadas nos links */
+    transition: background-color 0.3s ease; /* Define uma transição suave da cor de fundo ao passar o mouse sobre os links - a transição dura 0.3s (300ms) e usa o efeito de transição ease, que começa devagar, acelera no meio e desacelera no final.  */
+}
+
+/* Efeito ao passar o mouse nos links */
+.nav-links li a:hover {
+    background-color: #007BFF; /* Muda a cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Efeito ao clicar no link */
+.nav-links li a:active {
+    background-color: #0056b3; /* Cor mais escura ao clicar */
+}
+
+/* Estilo geral para o contêiner principal da página */
+main {
+    padding: 1rem; /* Espaçamento interno ao redor do conteúdo principal antes de chegar nos sections*/
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* 0 signfica que a margem superior e inferior do elemento será 0 (não haverá espaçamento acima ou abaixo do elemento)
+                      auto significa que a margem esquerda e direita será ajustada automaticamente para que o elemento seja centralizado horizontalmente na página. */
+}
+
+/* Estilos para as seções */
+section {
+    margin-bottom: 2rem; /* Espaçamento entre as seções */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 2rem; /* Espaçamento interno das seções */
+    border-bottom: 10px solid #bbbbbd; /* Linha divisória/sombra fake na parte inferior da seção */
+    background-color: #d5deed; /* Cor de fundo leve para diferenciar as seções */
+    
+}
+
+section h2{
+    margin-top: 25px; /* Espaçamento do cabeçalho H2 */
+}
+
+section hr{
+    margin: 10px 0px 10px 0px; /* Ajuste no tamanho da linha hr: 10px para as margens superior e inferior, 0px para as margens esquerda e direita */
+}
+
+/* Estilo para imagens de perfil */
+.profile-pic {
+    display: block; /* Imagem é inline, mas vamos colocar ela como block para permitir que a imagem ocupe uma linha inteira para permitir a centralização e controle do tamanho da imagem*/
+    width: 150px; /* Define a largura da imagem */
+    height: 150px; /* Define a altura da imagem */
+    border-radius: 50%; /* Formato circular para a imagem */
+    object-fit: cover; /* Define que a imagem deve cobrir completamente o contêiner (nesse caso, o espaço de 150x150px), sem distorção. */
+    margin: 1rem auto; /* Aplica uma margem externa de 1rem em todas as direções, criando um espaçamento ao redor da imagem. O valor auto para as margens laterais centraliza a imagem horizontalmente no contêiner pai. */
+    border: 2px solid #333; /* Adiciona uma borda sólida de 2 pixels ao redor da imagem */
+}
+
+/* Estilo para o contêiner de "Sobre Mim" */
+.about-container { 
+    display: flex;  /*Exibe o conteúdo em linha */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    gap: 1.5rem; /* Espaço entre a imagem e o texto */
+}
+
+
+/* Estilo para a lista de informações das disciplinas */
+.class-info {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0.5rem 0; /* Espaço entre os itens da lista */
+}
+
+/* Estilo para os itens de informações das disciplinas */
+.class-info li {
+    margin-bottom: 0.5rem; /* Espaço entre os itens da lista */
+    font-size: 0.9rem; /* Tamanho de fonte reduzido para o conteúdo de informações */
+    color: #555; /* Cor mais clara para um visual discreto */
+}
+
+/* Estilo dos botões de alternância */
+.toggle-btn-ementa, .toggle-btn-descricao {
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 0.5rem 1rem; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor muda ao passar sobre o botão */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.toggle-btn-ementa:hover , .toggle-btn-descricao:hover{
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 1rem; /* Espaçamento interno */
+    background-color: #0052b6; /* Cor de fundo do rodapé, consistente com o cabeçalho */
+    color: #fff; /* Cor do texto do rodapé */
+    margin-top: 2rem; /* Espaçamento acima do rodapé */
+}
+
+/* Estilo geral para todos os links */
+a {
+    color: #333; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+/* Efeito ao passar o mouse sobre os links */
+a:hover {
+    color: #007BFF; /* Cor dos links ao passar o mouse */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
